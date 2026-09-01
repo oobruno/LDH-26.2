@@ -13,13 +13,49 @@ module tb_basic_add;
 	//Estimulos
 	initial begin//Executa uma unica vez
 		a = 0; b = 0;
-		#10
+		#1
+		$monitor("a=%b b=%b s=%b",a ,b ,s);
+		#1
+		if(s==5'd0)begin
+			$monitor("TESTE1: PASS");
+		end else begin
+			$monitor("TESTE1: FAIL");
+		end
+		#8
+		
 		a = 1; b = 1;
-		#10
+		#1
+		$monitor("a=%b b=%b s=%b",a ,b ,s);
+		#1
+		if(s==5'd2)begin
+			$monitor("TESTE2: PASS");
+		end else begin
+			$monitor("TESTE2: FAIL");
+		end
+		#8
+		
 		a = 3; b = 5;
-		#10 
+		#1
+		$monitor("a=%b b=%b s=%b",a ,b ,s);
+		#1
+		if(s==5'd8)begin
+			$monitor("TESTE3: PASS");
+		end else begin
+			$monitor("TESTE3: FAIL");
+		end
+		#8
+		
 		a = 7; b = 9;
-		#10
+		#1
+		$monitor("a=%b b=%b s=%b",a ,b ,s);
+		#1
+		if(s==5'd16)begin
+			$monitor("TESTE4: PASS");
+		end else begin
+			$monitor("TESTE4: FAIL");
+		end
+		#8
+		
 		$finish;
 	end
 	
