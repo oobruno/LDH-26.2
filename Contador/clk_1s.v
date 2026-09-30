@@ -1,20 +1,21 @@
-module clk_1s(
-	input clk_50M,
+module clk_1s (
 	input rst,
+	input clk_50M,
 	output reg clk_out
 );
+
 	reg [24:0] count; //33554431 > 25M
+
+	always @(posedge clk_50M) begin
+		if(rst) begin
+			count   <= 0;
+			clk_out <= 0;
+		end else begin
+			count <= count + 1;
+			if(count == 25'd25000000) begin
+				clk_out <= ~clk_out;  //Alterna clock_out
+			end
+		end
+	end
 	
-always @(posedge clk_50M) begin
-    if (rst) begin
-        count <= 0;          // Reset
-        clk_out <= 0;
-    end else begin
-        count <= count + 1;  // Incremento
-        if (count == 25'd24999999) begin
-            count <= 0;
-            clk_out <= ~clk_out;
-        end
-    end
-end
-endmodule 
+endmodule
