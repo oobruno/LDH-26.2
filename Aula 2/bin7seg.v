@@ -24,4 +24,4 @@ module bin7seg (
 		endcase
 	end
 	
-endmodule
+endmodule 
