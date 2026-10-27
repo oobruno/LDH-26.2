@@ -18,13 +18,13 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 09:07:00  October 06, 2026
+# Date created = 08:47:51  October 20, 2026
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "18.1"
-DATE = "09:07:00  October 06, 2026"
+DATE = "08:47:51  October 20, 2026"
 
 # Revisions
 
-PROJECT_REVISION = "Maquina_de_estado"
+PROJECT_REVISION = "semaforo"
