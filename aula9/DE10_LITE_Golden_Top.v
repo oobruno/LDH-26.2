@@ -134,6 +134,26 @@ module DE10_LITE_Golden_Top(
 //  Structural coding
 //=======================================================
 
+	wire [7:0] result;
 
+	seq_mult dut (
+		.rst(~KEY[0]),
+		.clk(MAX10_CLK1_50),
+		.a(SW[0:3]),
+		.b(SW[4:7]),
+		.m(result),
+		.start(~KEY[1]),
+		.done({LEDR[0]})
+	);
 
+	bin7seg (
+		.bin(result[3:0]),
+		.hex(HEX0)
+	);
+	
+	bin7seg (
+		.bin(result[7:4]),
+		.hex(HEX1)
+	);
+	
 endmodule
