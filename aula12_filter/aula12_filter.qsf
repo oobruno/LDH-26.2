@@ -441,10 +441,11 @@ set_global_assignment -name EDA_TEST_BENCH_NAME tb_impulse_response -section_id 
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_impulse_response
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_impulse_response -section_id tb_impulse_response
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_impulse_response.v -section_id tb_impulse_response
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE movavg_filter.v
 set_global_assignment -name VERILOG_FILE tb_impulse_response.v
 set_global_assignment -name VERILOG_FILE DE10_LITE_Golden_Top.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE bw2_filter.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
